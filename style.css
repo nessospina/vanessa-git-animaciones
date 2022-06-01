@@ -1,0 +1,289 @@
+
+body{
+    background:linear-gradient(#F4BFBF, #e9ebce, #F4BFBF, #8CC0DE, #F4BFBF);
+}
+
+/* header */
+
+.container-header{
+    background-color: rgb(140, 192, 222);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr) ;
+    grid-template-areas: 
+    "logo nav nav . "
+    ;
+}  
+
+/* barra de navegacion */
+
+.logo{
+    justify-self: flex-end;
+    grid-area: logo;
+    width: 70px ;
+    height: 70px;  
+    border: none;  
+}
+
+nav{
+    padding: 0%;
+    margin: 0%;
+    grid-area: nav;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.lista{
+    display: flex;
+    list-style-type: none;
+}
+
+.lista a{
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: space-between;
+    transition: all 0.3s ease 0;
+    color:  #9c728c;
+}
+
+.lista a:hover{
+    color: crimson;
+    transition: linear 1s;
+}
+ /* titulos */
+
+h1{
+    color: rgb(140, 192, 222);
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+    transition: width 1s height;
+}
+
+h2{
+    font-family: 'Didact Gothic', sans-serif;
+    color: crimson;
+    justify-self: center;
+    text-align: center;
+    font-size: xx-large;
+}
+
+/* secciones */
+
+.seccion{
+    font-family: 'Didact Gothic', sans-serif;
+    color: crimson;
+    font-size: medium;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 30px 5px;
+}
+
+.seccion2{
+    grid-area: seccion2;
+    font-family: 'Didact Gothic', sans-serif;
+    color: crimson;
+    font-size: 23px;
+    
+}
+
+/* imagenes */
+
+.sectionImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagen{
+    width: 380px;
+    height: 380px;
+    border: crimson solid;
+    transition: height 1s, width 1s;
+}
+
+.imagen:hover{
+    width: 480px;
+    height: 480px;
+    border-color: rgb(0, 0, 0);
+}
+
+.divImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+}
+
+.imagenIndex{
+    width:150px;
+    height: 150px;
+}
+
+.imagenNosotros{
+    grid-area: imgNosotros;
+    padding: 10px 10px; 
+    margin: 0px 40px 20px 20px;
+}
+
+.imgNosotros{
+    border: crimson solid;
+    width:500px;
+    height: 370px;
+    transition: linear 0.5s;
+}
+
+.imgNosotros:hover{
+    width:550px;
+    height: 420px;
+    border-color: black;
+}
+
+.personalizar{
+    font-family: 'Didact Gothic', sans-serif;
+    color: crimson;
+    font-size: medium;
+    text-align:center;
+}
+
+.titulosImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: auto;
+    margin: auto;
+
+} 
+
+/* footer */
+
+.container-footer{
+    background-color:rgb(140, 192, 222);
+    padding: 80px 0px 80px 80px;
+    margin: 0;
+    
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+}
+
+.listaRedes {
+    justify-content: space-between;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
+.listaRedes a{
+    text-decoration: none;
+    transition: all 0.3s ease 0;
+    color: #3b878a;
+}
+
+.listaRedes a:hover{
+    color: #335a5c;
+}
+
+/* contenedor grids de la segunda pagina */
+
+.container-seccion{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "seccion2 seccion2 imgNosotros imgNosotros"
+    "seccion2 seccion2  imgNosotros imgNosotros"
+    ;
+}
+
+/* responsive  */
+
+
+@media all and (max-width: 400px){
+.container-header{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: (2, 1fr);
+    } 
+
+.logo{
+    grid-area: logo;
+    display: none;
+    }
+
+.navBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -30px;
+    }
+
+.sectionImg{
+    display: flex;
+    flex-direction: column;
+    }
+
+.imagen{
+    margin: 0px 0px 0px 10px;
+    width: 360px;
+    height: 360px;
+    }
+
+.titulosImg{
+    display: flex;
+    flex-direction: column;
+    }
+
+.imagenIndex{
+    display: flex;
+    flex-direction: row;
+    width: 100px ;
+    height: 100px ;
+    }
+        
+.redes{
+    display: grid;
+    justify-self: start;
+    margin-left: -110px;
+    }
+
+.listaRedes {
+    display: grid;
+    justify-self: center;
+    list-style-type: none;
+    }
+
+.container-seccion{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "seccion2 seccion2 seccion2 seccion2 "
+    "imgNosotros imgNosotros imgNosotros imgNosotros"
+    ;
+    }
+
+.seccion2{
+    text-align: center;
+    }
+    
+.imgNosotros{
+    display: grid;
+    justify-self: stretch;
+    border: crimson solid;
+    width:300px;
+    height: 240px;
+    padding: 0px;
+    margin-left: -15px;
+    }
+} 
+
+
+
+
